@@ -7,6 +7,7 @@ public class Plataforma : MonoBehaviour
     [SerializeField] Vector3 direccion = new Vector3(0, 0, 0);
     [SerializeField] int velocidad;
     float timer = 0;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +19,7 @@ public class Plataforma : MonoBehaviour
     {
         transform.Translate(direccion * velocidad * Time.deltaTime);
         timer += 1 * Time.deltaTime;
-        if (timer >= 5)
+        if (timer >= 1.6)
         {
             direccion = direccion * -1;
             timer = 0;
