@@ -29,9 +29,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3118983180552524708}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.703349, y: 0.002802992, z: -0.002716515, w: 0.710834}
+  m_LocalRotation: {x: 0.70334613, y: 0.0028076493, z: -0.0027210969, w: 0.7108369}
   m_LocalPosition: {x: -2.795, y: 2.346, z: 1.143}
-  m_LocalScale: {x: 0.044813048, y: 0.37477148, z: 0.04481304}
+  m_LocalScale: {x: 0.07531281, y: 0.62984097, z: 0.0753128}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -98,9 +98,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65efa7c9cdfafdf46aed8ebb67a72f92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidad: 2
-  rotacion: {x: 0, y: 0, z: 1}
-  fuerza: 15
+  rotacion: {x: 0, y: 1, z: 0}
+  fuerza: 2
 --- !u!136 &4224074928733215928
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -132,7 +131,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3118983180552524708}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 1e+9
   m_Drag: 0
   m_AngularDrag: 0
   m_CenterOfMass: {x: 0, y: 0, z: 0}
