@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Coleccionable
   - Trampa
+  - pared
   layers:
   - Default
   - TransparentFX
