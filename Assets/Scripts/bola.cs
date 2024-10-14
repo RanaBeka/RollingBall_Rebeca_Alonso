@@ -15,7 +15,8 @@ public class bola : MonoBehaviour
     [SerializeField] int fuerza;
     [SerializeField] int vida;
     private int puntuacion;
-
+    [SerializeField] AudioClip sonidoMoneda;
+    [SerializeField] AudioManager manager;
     
     // Start is called before the first frame update
     void Start()
@@ -45,6 +46,7 @@ public class bola : MonoBehaviour
     {
         if (other.gameObject.tag == "collecionable")
         {
+            manager.ReproducirSonido(sonidoMoneda);
             Destroy(other.gameObject);
             vida -= 10;
         }
@@ -56,6 +58,10 @@ public class bola : MonoBehaviour
         if (vida <= 0)
         {
             Destroy(this.gameObject);
+        }
+        if (other.gameObject.CompareTag("pared"))
+        {
+            Time.timeScale = 0.1f;
         }
     }
         
