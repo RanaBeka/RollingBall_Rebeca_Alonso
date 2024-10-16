@@ -17,7 +17,7 @@ public class bola : MonoBehaviour
     private int puntuacion;
     [SerializeField] AudioClip sonidoMoneda;
     [SerializeField] AudioManager manager;
-    
+    int collecionable = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -49,6 +49,7 @@ public class bola : MonoBehaviour
             manager.ReproducirSonido(sonidoMoneda);
             Destroy(other.gameObject);
             vida -= 10;
+            collecionable++;
         }
         if (other.gameObject.CompareTag("trampa"))
         {
