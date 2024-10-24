@@ -21,13 +21,17 @@ public class Cam : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Player"))
         {
-            Directional.SetActive(false);
-            Cenital.SetActive(true);
-        }
-        else
-        {
-            Directional.SetActive(true);
-            Cenital.SetActive(false);
+            if(Directional.activeSelf)
+            {
+                Directional.SetActive(false);
+                Cenital.SetActive(true);
+
+            }
+            else
+            {
+                Directional.SetActive(true);
+                Cenital.SetActive(false);
+            }
         }
     }
 }
