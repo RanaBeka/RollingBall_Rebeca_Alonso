@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class bola : MonoBehaviour
 {
@@ -63,6 +64,16 @@ public class bola : MonoBehaviour
         if (other.gameObject.CompareTag("pared"))
         {
             Time.timeScale = 0.1f;
+        }
+        if (other.gameObject.tag == "morir")
+        {
+            Destroy(this.gameObject);
+            SceneManager.LoadScene(2);
+        }
+        if (other.gameObject.tag == "ganar")
+        {
+            Destroy(this.gameObject);
+            SceneManager.LoadScene(3);
         }
     }
         

@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/Reinicio.unity
+    guid: 866cd3d9c58f35d449ee70ed3c31a7f4
+  - enabled: 1
+    path: Assets/Scenes/Ganar.unity
+    guid: 22095ac82c13d0b48bcc8936737b8ac2
   m_configObjects: {}
