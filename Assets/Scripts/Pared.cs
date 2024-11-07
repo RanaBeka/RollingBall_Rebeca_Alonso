@@ -5,6 +5,7 @@ using UnityEngine;
 public class Pared : MonoBehaviour
 {
     [SerializeField] private Rigidbody[] rbs;
+    [SerializeField] private float tiempoBola;
     private float timer = 0f;
     private bool iniciarCuenta = false;
     // Start is called before the first frame update
@@ -22,7 +23,7 @@ public class Pared : MonoBehaviour
             if(timer >=2)
             {
                 Time.timeScale = 1f;
-                for (int i = 0; i < 20; i++)
+                for (int i = 0; i < rbs.Length; i++)
                 {
                     rbs[i].useGravity = true;
                 }
@@ -31,9 +32,9 @@ public class Pared : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.CompareTag("Bola"))
+        if(other.gameObject.CompareTag("bola"))
         {
-            Time.timeScale = 0.2f;
+            Time.timeScale = tiempoBola;
             iniciarCuenta=true;
         }
     }

@@ -11,6 +11,7 @@ TagManager:
   - trampa
   - coleccionable
   - ganar
+  - bola
   layers:
   - Default
   - TransparentFX

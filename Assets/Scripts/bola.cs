@@ -45,12 +45,12 @@ public class bola : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "collecionable")
+        if (other.gameObject.CompareTag ("coleccionable"))
         {
             manager.ReproducirSonido(sonidoMoneda);
-            Destroy(other.gameObject);
             vida -= 10;
             collecionable++;
+            Destroy(other.gameObject);
         }
         if (other.gameObject.CompareTag("trampa"))
         {
@@ -65,12 +65,12 @@ public class bola : MonoBehaviour
         {
             Time.timeScale = 0.1f;
         }
-        if (other.gameObject.tag == "morir")
+        if (other.gameObject.CompareTag ( "morir"))
         {
             Destroy(this.gameObject);
             SceneManager.LoadScene(2);
         }
-        if (other.gameObject.tag == "ganar")
+        if (other.gameObject.CompareTag ( "ganar"))
         {
             Destroy(this.gameObject);
             SceneManager.LoadScene(3);
