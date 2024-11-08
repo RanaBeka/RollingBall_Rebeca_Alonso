@@ -22,6 +22,7 @@ public class bola : MonoBehaviour
     [SerializeField] AudioManager manager;
     [SerializeField] float distanciaDeteccionSuelo;
     [SerializeField] LayerMask queEsSuelo;
+
     
     // Start is called before the first frame update
     void Start()
@@ -38,19 +39,23 @@ public class bola : MonoBehaviour
         direccion.x = h;
         direccion.z = v;
         rb.AddForce(direccion.normalized * fuerza, ForceMode.Force);
-        
 
-            
-            
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Salta();
+
+        }
+
+
 
     }
     void Salta()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            GetComponent<Rigidbody>().AddForce(direccionSalto * fuerzasalto, ForceMode.Impulse);
+        
+        
+     GetComponent<Rigidbody>().AddForce(direccionSalto * fuerzasalto, ForceMode.Impulse);
 
-        }
+        
 
     }
     bool DetectarSuelo()
@@ -92,6 +97,7 @@ public class bola : MonoBehaviour
             SceneManager.LoadScene(3);
         }
     }
-        
     
+
+
 }

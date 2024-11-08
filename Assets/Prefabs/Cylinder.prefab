@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotacion: {x: 0, y: 1, z: 0}
-  fuerza: 2
+  fuerza: 3
 --- !u!136 &4224074928733215928
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -107,7 +107,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3118983180552524708}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 30e2ca1f085d80b4d849b24ac8f6c1d6, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0

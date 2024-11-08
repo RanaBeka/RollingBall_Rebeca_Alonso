@@ -9,7 +9,7 @@ public class Cam : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Cenital.SetActive(false);
     }
 
     // Update is called once per frame
@@ -19,7 +19,7 @@ public class Cam : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.CompareTag("Player"))
+        if(other.gameObject.CompareTag("bola"))
         {
             if(Directional.activeSelf)
             {
