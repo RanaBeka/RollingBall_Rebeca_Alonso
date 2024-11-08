@@ -947,8 +947,8 @@ MonoBehaviour:
   direccion: {x: 0, y: 0, z: 1}
   velocidad: 1
   direccionSalto: {x: 0, y: 1, z: 0}
-  fuerzasalto: 3
-  fuerza: 2
+  fuerzasalto: 6
+  fuerza: 5
   vida: 100
   textoColeccionable: {fileID: 1218427788}
   sonidoMoneda: {fileID: 8300000, guid: 6ee2b0f0d5995e44c9e7fed8647f4e73, type: 3}
