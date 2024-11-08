@@ -21,17 +21,20 @@ public class Cam : MonoBehaviour
     {
         if(other.gameObject.CompareTag("bola"))
         {
-            if(Directional.activeSelf)
-            {
-                Directional.SetActive(false);
-                Cenital.SetActive(true);
+          
+          Directional.SetActive(false);
+          Cenital.SetActive(true);
 
-            }
-            else
-            {
-                Directional.SetActive(true);
-                Cenital.SetActive(false);
-            }
+            
+            
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("bola"))
+        {
+            Directional.SetActive(true);
+            Cenital.SetActive(false);
         }
     }
 }
